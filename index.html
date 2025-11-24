@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Map - Full Features</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>خريطة تفاعلية مع خيارات الاستيراد والتصدير</h1>
+  <div id="map"></div>
+
+  <div class="controls">
+    <h3>خيارات البيانات:</h3>
+    <input type="file" id="fileInput" accept=".geojson,.kml,.csv,.zip" />
+    <button onclick="exportGeoJSON()">تصدير GeoJSON</button>
+    <button onclick="exportCSV()">تصدير CSV</button>
+    <button onclick="exportKML()">تصدير KML</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/togeojson/0.16.0/togeojson.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
